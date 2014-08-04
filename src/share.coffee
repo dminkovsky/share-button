@@ -95,9 +95,6 @@ class Share extends ShareUtils
     ## Add necessary classes to instance (Note: FF doesn't support adding multiple classes in a single call)
     @add_class(instance, "sharer-#{index}")
 
-    ## Get instance - (Note: Reload Element. gS/qSA doesn't support live NodeLists)
-    instance = document.querySelectorAll(element)[index] # TODO: Use more efficient method.
-
     ## Inject HTML and CSS
     @inject_css(instance)
     @inject_html(instance)
